@@ -1,5 +1,6 @@
 
 import Welcome from './Welcome';
+import Login from './Login';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <Welcome />
+      <Login />
     </div>
   );
 }
