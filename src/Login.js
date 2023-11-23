@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 
 const clientId = "08a59a339ecc4f58bd386a822dc642f4";
 const spotifyEndPoint = "https://accounts.spotify.com/authorize?";
