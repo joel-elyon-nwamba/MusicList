@@ -19,8 +19,8 @@ function Login() {
 
 
   function handleLogout() {
-    window.localStorage.removeItem("token");
     setToken("");
+    window.localStorage.removeItem("token");
   }
 
   // get token
