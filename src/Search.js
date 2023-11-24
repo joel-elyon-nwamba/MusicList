@@ -9,6 +9,7 @@ function Search() {
     <div>
       <form>
         <input type="text"
+        value={search}
         onChange={handleInput}
          />
         <button>Submit</button>
