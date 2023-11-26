@@ -1,6 +1,9 @@
 
 import Welcome from './Welcome';
 import Login from './Login';
+import Search from './Search';
+import GetPlaylist from './Playlist'
+
 import './App.css';
 
 function App() {
@@ -9,6 +12,8 @@ function App() {
     <div className="App">
       <Welcome />
       <Login />
+      <GetPlaylist />
+      <Search />
     </div>
   );
 }
