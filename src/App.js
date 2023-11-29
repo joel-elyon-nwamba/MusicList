@@ -1,6 +1,6 @@
 
 import Welcome from './Welcome';
-import Login from './Login';
+import Auth from './Auth';
 import Search from './Search';
 import GetPlaylist from './Playlist';
 import './App.css';
@@ -12,8 +12,6 @@ function App() {
   return (
     <div className="App">
       <Welcome />
-      <Login />
-      <GetPlaylist />
       <Search />
     </div>
   );
