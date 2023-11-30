@@ -12,7 +12,8 @@ const secretId = "08e2a83512574c739906856d247fe99f";
 function Search() {
   const [searchInput, setSearchInput] =  useState("");
   const [accessToken, setAccessToken] = useState("");
-  const [albums, setAlbums] = useState([])
+  const [albums, setAlbums] = useState([]);
+  // const [playlist, setPlayList] = useState([]);
 
   useEffect(() => {
     const authParams = {
@@ -36,14 +37,47 @@ function Search() {
         }
       }
 
-      const artist = await fetch('https://api.spotify.com/v1/search?q=' + searchInput + "&type=artist", searchArtist).then(response => response.json()).then(data => { return data.artists.items[0].id})
+      const artist = await fetch('https://api.spotify.com/v1/search?q=' + searchInput + "&type=artist,track,playlist&include_external=audio", searchArtist).then(response => response.json()).then(data => { return data.artists.items[0].id})
       // get request with artist id grab all albums from artist
       const albumsReturned = await fetch("https://api.spotify.com/v1/artists/" + artist + "/albums" + '?include_groups=album&market=US&limit=50', searchArtist).then(response => response.json()).then(data => {
         console.log(data);
         setAlbums(data.items)
       });
+      
       // Now we display the albums
+      // checkAudio(data.items)
   }
+
+  function checkAudio(tracks) {
+    const audioTrack = tracks.filter(track => track.preview_url && track.is_playable);
+    setAlbums(audioTrack);
+  }
+  console.log(setAlbums)
+
+
+  // useEffect(() => {
+  //   if(accessToken) {
+  //     playList()
+  //   }
+  // }, [accessToken])
+
+
+  // async function playList() {
+  //   const getThePlayList = {
+  //     method: "GET",
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Authorization': 'Bearer ' + accessToken
+  //     }
+  //   }
+  //   const playlistFetch = await fetch('https://api.spotify.com/v1/playlists', getThePlayList).then(response => response.json()).then(data => {
+  //     setPlayList(data)
+  //   })
+
+  //   console.log(playlistFetch)
+  // }
+
+
 
   console.log(albums)
   return(
