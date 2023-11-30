@@ -1,8 +1,6 @@
 
-import Welcome from './Welcome';
-import Auth from './Auth';
-import Search from './Search';
-import GetPlaylist from './Playlist';
+import Welcome from './Component/Welcome';
+import Search from './Component/Search';
 import './App.css';
 
 

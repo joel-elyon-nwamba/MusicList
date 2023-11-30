@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.jpg'
-import "./Welcome.css";
+import logo from '../logo.jpg'
+import "../Welcome.css"
 function Welcome() {
   return(
     <div>

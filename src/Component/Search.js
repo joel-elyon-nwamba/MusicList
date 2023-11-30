@@ -1,6 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, InputGroup, FormControl, Button, Row, Card } from "react-bootstrap";
+import { Container, InputGroup, FormControl, Button, Row, Card } from 
+"react-bootstrap";
 import React, { useState, useEffect } from "react"
+import AlbumList from "./AlbumList";
+
+
 
 const clientId = "08a59a339ecc4f58bd386a822dc642f4";
 const secretId = "08e2a83512574c739906856d247fe99f";
@@ -56,6 +60,7 @@ function Search() {
             }}
             onChange={event => setSearchInput(event.target.value)}
           />
+          {/* <SearchInput onSearch={search} /> */}
           <Button onClick={search}>
             Search
           </Button>
@@ -63,7 +68,7 @@ function Search() {
       </Container>
       <Container>
         <Row className="mx-2 row row-cols-4">
-          {albums.map((album, i) => {
+          {/* {albums.map((album, i) => {
             return(
               <Card>
               <Card.Img src={album.images[0].url} />
@@ -72,7 +77,8 @@ function Search() {
               </Card.Body>
             </Card>
             )
-          })}
+          })} */}
+          <AlbumList albums={albums} />
 
         </Row>
       </Container>
