@@ -4,7 +4,7 @@ import "../Welcome.css"
 function Welcome() {
   return(
     <div>
-      <h1>Welcome to Music Influence</h1>
+      <h1 className='text-10xl'>Welcome to Music Influence</h1>
       <img className="img-logo" src={logo} alt="logo life"/>
       
     </div>
