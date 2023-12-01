@@ -1,22 +1,18 @@
 import React from "react";
-import { Container,  Row, Card } from "react-bootstrap";
-
-function AlbumList( {albums} ) {
+import "../AlbumList.css"
+function AlbumList({ albums }) {
   return (
-    <div className="row row-cols-7">
-      <Container>
-        <Row className="mx-6 row row-cols-8">
-      {albums.map((album, i) => (
-        <Card>
-          <Card.Img src={album.images[0].url} />
-          <Card.Body>
-            <Card.Title>{album.name}</Card.Title>
-          </Card.Body>
-        </Card>
+      <>
+        {albums.map((album, i) => (
+        <>
+        <div key={i} className="flex-container-one">
+          <img src={album.images[0].url} alt="" className="flex-two"/>
+          </div>
+          <br/>
+            <h3 className="">{album.name}</h3>
+  </>
       ))}
-      </Row>
-    </Container>
-    </div>
+    </>
   );
 }
 

@@ -3,9 +3,9 @@ import logo from '../logo.jpg'
 import "../Welcome.css"
 function Welcome() {
   return(
-    <div>
-      <h1 className='text-10xl'>Welcome to Music Influence</h1>
-      <img className="img-logo" src={logo} alt="logo life"/>
+    <div className="flex justify-between items-center pt-5">
+      <h1 className="text-center text-red-800 font-mono">Welcome to Music Influence</h1>
+      <img className="w-20 rounded-full" src={logo} alt="logo life"/>
       
     </div>
   )

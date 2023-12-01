@@ -83,7 +83,7 @@ function Search() {
   return(
     <div className="container">
       <Container>
-        <InputGroup className="mb-3" size="lg">
+        <InputGroup className="">
           <FormControl 
             placeholder="Search For Artist"
             type="input"
