@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/MusicList/static/css/main.a8cd360e.css",
+    "main.js": "/MusicList/static/js/main.f4b35a35.js",
+    "static/js/787.959d26d8.chunk.js": "/MusicList/static/js/787.959d26d8.chunk.js",
+    "static/media/logo.jpg": "/MusicList/static/media/logo.9ed0c8876387ba320480.jpg",
+    "index.html": "/MusicList/index.html",
+    "main.a8cd360e.css.map": "/MusicList/static/css/main.a8cd360e.css.map",
+    "main.f4b35a35.js.map": "/MusicList/static/js/main.f4b35a35.js.map",
+    "787.959d26d8.chunk.js.map": "/MusicList/static/js/787.959d26d8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8cd360e.css",
+    "static/js/main.f4b35a35.js"
+  ]
+}
