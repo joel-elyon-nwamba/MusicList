@@ -49,37 +49,10 @@ function Search() {
   }
 
   function checkAudio(tracks) {
-    const audioTrack = tracks.filter(track => track.preview_url && track.is_playable);
-    setAlbums(audioTrack);
+    const playableTracks = tracks.filter(track => track.preview_url);
+    console.log("Playable Travks: ", playableTracks)
+    setAlbums(playableTracks);
   }
-  console.log(setAlbums)
-
-
-  // useEffect(() => {
-  //   if(accessToken) {
-  //     playList()
-  //   }
-  // }, [accessToken])
-
-
-  // async function playList() {
-  //   const getThePlayList = {
-  //     method: "GET",
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       'Authorization': 'Bearer ' + accessToken
-  //     }
-  //   }
-  //   const playlistFetch = await fetch('https://api.spotify.com/v1/playlists', getThePlayList).then(response => response.json()).then(data => {
-  //     setPlayList(data)
-  //   })
-
-  //   console.log(playlistFetch)
-  // }
-
-
-
-  console.log(albums)
   return(
     <div className="container">
       <Container>
@@ -101,20 +74,9 @@ function Search() {
         </InputGroup>
       </Container>
       <Container>
-        <Row className="mx-2 row row-cols-4">
-          {/* {albums.map((album, i) => {
-            return(
-              <Card>
-              <Card.Img src={album.images[0].url} />
-              <Card.Body>
-                <Card.Title>{album.name}</Card.Title>
-              </Card.Body>
-            </Card>
-            )
-          })} */}
+        <Row>
           <AlbumList albums={albums} />
-
-        </Row>
+         </Row>
       </Container>
     </div>
   )
@@ -122,3 +84,5 @@ function Search() {
 
 
 export default Search
+
+// lassName="mx-2 row row-cols-4"
